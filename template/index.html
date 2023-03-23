@@ -15,9 +15,16 @@
             display: block;
         }
 
+        a span {
+            top: 5px;
+            position: relative;
+        }
+
         div.picNav {
             text-align: center;
-            height: 30px;
+            height: 50px;
+            top: 5px;
+            position: relative;
             overflow: hidden;
         }
 
@@ -29,6 +36,9 @@
             text-align: center;
             color: #fff;
             font-weight: bold;
+            font-size: xx-large;
+            text-decoration: none;
+            padding: 5px;
         }
 
         a.next {
@@ -39,6 +49,9 @@
             text-align: center;
             color: #fff;
             font-weight: bold;
+            font-size: xx-large;
+            text-decoration: none;
+            padding: 5px;
         }
     </style>
     <script src="jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
@@ -46,11 +59,15 @@
 </head>
 <body>
     <div class="picNav">
-        <a class="prev" href="javascript:navigate('ID_PREVIOUS')" title="上一章"><span>上一章</span></a>
-        <a class="next" href="javascript:navigate('ID_NEXT')" title="下一章"><span>下一章</span></a>
+        <a class="prev" href="javascript:navigate('ID_PREVIOUS')" title="ID_PREVIOUS_TITLE"><span>上一章</span></a>
+        <a class="next" href="javascript:navigate('ID_NEXT')" title="ID_NEXT_TITLE"><span>下一章</span></a>
     </div>
     <div>
 ID_IMAGES
+    </div>
+    <div class="picNav">
+        <a class="prev" href="javascript:navigate('ID_PREVIOUS')" title="ID_PREVIOUS_TITLE"><span>上一章</span></a>
+        <a class="next" href="javascript:navigate('ID_NEXT')" title="ID_NEXT_TITLE"><span>下一章</span></a>
     </div>
     <script>
         lazyLoadInit({ showTime: 1000 });
