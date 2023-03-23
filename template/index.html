@@ -1,0 +1,64 @@
+﻿<!-- https://github.com/channg/EasyLazyload.js -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>ID_TITLE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        body {
+            background-color: black;
+        }
+
+        img {
+            margin: 0 auto;
+            display: block;
+        }
+
+        div.picNav {
+            text-align: center;
+            height: 30px;
+            overflow: hidden;
+        }
+
+        a.prev {
+            background-color: #ff6600;
+            width: 87px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        a.next {
+            background-color: #009900;
+            width: 87px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+    <script src="jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="EasyLazyload.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div class="picNav">
+        <a class="prev" href="javascript:navigate('ID_PREVIOUS')" title="上一章"><span>上一章</span></a>
+        <a class="next" href="javascript:navigate('ID_NEXT')" title="下一章"><span>下一章</span></a>
+    </div>
+    <div>
+ID_IMAGES
+    </div>
+    <script>
+        lazyLoadInit({ showTime: 1000 });
+        function navigate(uri) {
+            if (typeof uri === "string" && uri !== "") {
+                window.location.href = uri;
+            }
+        }
+    </script>
+</body>
+</html>
